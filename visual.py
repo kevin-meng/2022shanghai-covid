@@ -43,6 +43,11 @@ def plot_map(node_layer=None,center = [31.251737,121.422300],zoom_start=9,fig_ty
                    attr='蓝黑版',
                    zoom_start=zoom_start,
                    left='0%',
+                   min_lat=30,
+                   max_lat=32,
+                   min_lon=120,
+                   max_lon=122.5,                 
+                   min_zoom = 9,  
                    # width='60%',
                    # height='60%'
                   )
@@ -52,6 +57,11 @@ def plot_map(node_layer=None,center = [31.251737,121.422300],zoom_start=9,fig_ty
           attr='default',
            zoom_start=zoom_start,
            left='0%',
+           min_lat=30,
+           max_lat=32,
+           min_lon=120,
+           max_lon=122.5,                 
+           min_zoom = 11,                              
            # width='60%',
            # height='60%'
           )
@@ -59,6 +69,25 @@ def plot_map(node_layer=None,center = [31.251737,121.422300],zoom_start=9,fig_ty
         sh_map.add_child(node_layer)
 
     return sh_map
+
+
+def load_point2layer(point_json):
+    """
+    加载保存的数据点.
+    """
+    point_layer = folium.GeoJson(point_json, name='标记点', show=False,
+                             tooltip=folium.GeoJsonTooltip(
+                                 fields=['详细地址','日期'],
+                                 aliases=['社区:','次数:'],
+                                 localize=True),
+                                 marker = folium.CircleMarker(  radius=1,
+                                                                color="#f4e925",
+                                                                opacity=0,
+                                                                fill_opacity=0.8,
+                                                                fill_color="#f4e925",
+                                                            )
+                             )
+    return point_layer
 
 
 def plot_summary(df_summary,width=450, height=400,):
@@ -75,7 +104,7 @@ def plot_summary(df_summary,width=450, height=400,):
 
     fig.update_layout(
         showlegend=True,
-        plot_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(1,0,0,0)',
         legend=dict(
         yanchor="top",
         y=0.99,
@@ -86,7 +115,12 @@ def plot_summary(df_summary,width=450, height=400,):
     fig.update_layout(title='',
                       width=width,
                       height=height,
+                      margin=dict(l=10, r=10, t=20, b=10),
+                      # paper_bgcolor='rgba(1,0,0,0)',
                       # xaxis_title='日期',
                       # yaxis_title='人数'
                      )
+    # 设置拖拽效果
+    # https://plotly.com/javascript/reference/#layout-hovermode
+    fig.update_layout(hovermode='x unified',dragmode=False)
     return fig

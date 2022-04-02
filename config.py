@@ -12,9 +12,10 @@ info_contact = """
     - 项目源码已发布到 [GItHub](https://github.com/kevin-meng/2022shanghai-covid), 欢迎 Star.
     """
 
+MODE = 'mobile'
 
 # 移动端适配参数
-mobile_params = (400,400,400,450)  # (地图宽, 地图高, 图表宽, 图表高)
+mobile_params = (400,380,400,450, False)  # (地图宽, 地图高, 图表宽, 图表高, 导航图标)
 
 # PC 端参数
-pc_params = (700,600,700,500)  # (地图宽, 地图高, 图表宽, 图表高)
+pc_params = (700, 600, 700, 500, True)  # (地图宽, 地图高, 图表宽, 图表高, 导航图标)

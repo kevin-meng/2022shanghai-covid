@@ -1,5 +1,4 @@
 import streamlit as st
-import leafmap.foliumap as leafmap
 import pickle
 import json
 import folium
@@ -9,7 +8,7 @@ import streamlit.components.v1 as components
 import plotly.graph_objects as go
 from utils import load_pickle,distinct
 from visual import add_point,plot_maker,plot_map
-from config import info_data,info_contact,mobile_params,pc_params
+from config import info_data,info_contact,MODE, mobile_params,pc_params
 
 
 @st.cache(ttl=3*60*60) # persist=True
@@ -19,7 +18,6 @@ def load_data():
     
     date_range,latest_date, eare_ls, dist_info= load_pickle("./data/备用数据.pkl")
     dists = load_pickle("./data/dists.pkl")
-    print(len(dists))
     return data,df_summary, date_range,latest_date, eare_ls, dist_info,dists
 
 
@@ -31,8 +29,11 @@ def app():
     data,df_summary, date_range,latest_date, eare_ls, dist_info,dists = load_data()
 
     # ###################################################################
-    map_width,map_height,graph_width,graph_height = mobile_params
-    map_width,map_height,graph_width,graph_height = pc_params
+    if MODE == 'mobile':
+        params = mobile_params
+    else:
+        params = pc_params
+    map_width, map_height, graph_width, graph_height, use_icon = params
     
     
     st.write("## 社区疫情情况查询")
@@ -76,11 +77,10 @@ def app():
                          (data['latitude']>=(target_lat-0.035))&(data['latitude']<=(target_lat+0.035))]
         df_sub = data_sub.groupby('详细地址').agg({'longitude':max,'latitude':max,'日期':distinct}).reset_index()
 
-
         st.write("")
         sh_sub_map= plot_map(add_point(df_sub,ratio=2,color_index=1),
                          center=(target_lat,target_long),
-                         zoom_start=14,fig_type=1)
+                         zoom_start=13,fig_type=1)
         marker = plot_maker(target_lat,target_long,target_area)
         marker.add_to(sh_sub_map)
         folium_static(sh_sub_map,width=map_width,height=map_height)   
