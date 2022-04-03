@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: covid-shanghai-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      component: covid-shanghai-server
+  template:
+    metadata:
+      labels:
+        component: covid-shanghai-server
+    spec:
+      containers:
+        - image: tommylike/shanghai-covid:0.0.1
+          imagePullPolicy: Always
+          name: covid-shanghai-server
+          livenessProbe:
+            httpGet:
+              path: "/"
+              port: 8080
+            initialDelaySeconds: 3
+            periodSeconds: 5
+          readinessProbe:
+            httpGet:
+              path: "/"
+              port: 8080
+            initialDelaySeconds: 10
+            failureThreshold: 1
+            periodSeconds: 5
+            timeoutSeconds: 10
+          resources:
+            requests:
+              cpu: 1000m
+              memory: 1000Mi
+            limits:
+              cpu: 4000m
+              memory: 4000Mi
+          ports:
+            - containerPort: 8080
+              name: http
+              protocol: TCP
+          # if we don't need to deploy on root domain, use args: --server.baseUrlPath shanghai-covid
+          env:
+            - name: STREAMLIT_SERVER_PORT
+              value: "8080"
+            - name: STREAMLIT_SERVER_BASEURLPATH
+              value: "/shanghai-covid/"
+      serviceAccountName: covid-shanghai

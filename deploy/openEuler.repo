@@ -1,0 +1,50 @@
+#generic-repos is licensed under the Mulan PSL v2.
+#You can use this software according to the terms and conditions of the Mulan PSL v2.
+#You may obtain a copy of Mulan PSL v2 at:
+#    http://license.coscl.org.cn/MulanPSL2
+#THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR
+#IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT, MERCHANTABILITY OR FIT FOR A PARTICULAR
+#PURPOSE.
+#See the Mulan PSL v2 for more details.
+
+[OS]
+name=OS
+baseurl=http://mirrors.tuna.tsinghua.edu.cn/openeuler/openEuler-21.09/OS/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=http://mirrors.tuna.tsinghua.edu.cn/openeuler/openEuler-21.09/OS/$basearch/RPM-GPG-KEY-openEuler
+
+[everything]
+name=everything
+baseurl=http://mirrors.tuna.tsinghua.edu.cn/openeuler/openEuler-21.09/everything/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=http://mirrors.tuna.tsinghua.edu.cn/openeuler/openEuler-21.09/everything/$basearch/RPM-GPG-KEY-openEuler
+
+[EPOL]
+name=EPOL
+baseurl=http://mirrors.tuna.tsinghua.edu.cn/openeuler/openEuler-21.09/EPOL/main/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=http://mirrors.tuna.tsinghua.edu.cn/openeuler/openEuler-21.09/OS/$basearch/RPM-GPG-KEY-openEuler
+
+[debuginfo]
+name=debuginfo
+baseurl=http://mirrors.tuna.tsinghua.edu.cn/openeuler/openEuler-21.09/debuginfo/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=http://mirrors.tuna.tsinghua.edu.cn/openeuler/openEuler-21.09/debuginfo/$basearch/RPM-GPG-KEY-openEuler
+
+[source]
+name=source
+baseurl=http://mirrors.tuna.tsinghua.edu.cn/openeuler/openEuler-21.09/source/
+enabled=1
+gpgcheck=1
+gpgkey=http://mirrors.tuna.tsinghua.edu.cn/openeuler/openEuler-21.09/source/RPM-GPG-KEY-openEuler
+
+[update]
+name=update
+baseurl=http://mirrors.tuna.tsinghua.edu.cn/openeuler/openEuler-21.09/update/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=http://mirrors.tuna.tsinghua.edu.cn/openeuler/openEuler-21.09/OS/$basearch/RPM-GPG-KEY-openEuler

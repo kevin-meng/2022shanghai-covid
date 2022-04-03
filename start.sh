@@ -1,1 +1,2 @@
-# 部署参数
+# 运行
+streamlit run app.py

@@ -1,0 +1,22 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: covid-shanghai
+rules: []
+---
+kind: ServiceAccount
+apiVersion: v1
+metadata:
+  name: covid-shanghai
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: covid-shanghai
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: covid-shanghai
+subjects:
+  - kind: ServiceAccount
+    name: ocovid-shanghai
