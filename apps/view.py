@@ -42,7 +42,7 @@ def app():
     st.write("---")
     st.write("### 疫情位置分布")
     st.info("""
-            - 展示过去7天，上海感染社区分布.
+            - 展示过去3天，上海感染社区分布.
             - 点击标记点，可查看对应社区名称.
             """)
     point_layer = load_point2layer(point_json)
