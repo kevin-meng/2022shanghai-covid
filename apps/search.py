@@ -70,7 +70,7 @@ def app():
         date_lower, date_upper = st.select_slider(
              '',
              options=date_range,
-             value=(date_range[-7], date_range[-1]))
+             value=(date_range[-3], date_range[-1]))
 
         data_sub = data[(data['日期']>=date_lower)&(data['日期']<=date_upper)&\
                          (data['longitude']>=(target_long-0.035))&(data['longitude']<=(target_long+0.035))&\

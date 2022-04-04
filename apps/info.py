@@ -28,7 +28,11 @@ def app():
     st.write("**选择地区**")
     dist = st.selectbox('', dists,index = 0)
     st.write("---")
+    
     if dist == '浦东新区':
+        # expander = st.expander("热线电话")
+        # expander.write(info_data)
+        
         st.write("""
         #### 热线电话
         浦东新区的居民可以通过以下渠道采购主副食品或咨询：
