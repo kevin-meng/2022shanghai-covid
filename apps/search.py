@@ -1,6 +1,7 @@
-import streamlit as st
 import pickle
+import jinja2
 import json
+import streamlit as st
 import folium
 from streamlit_folium import folium_static
 from PIL import Image
@@ -8,7 +9,9 @@ import streamlit.components.v1 as components
 import plotly.graph_objects as go
 from utils import load_pickle,distinct
 from visual import add_point,plot_maker,plot_map
-from config import info_data,info_contact,MODE, mobile_params,pc_params
+from config import MODE, mobile_params,pc_params
+from content import info_data,info_contact
+
 
 
 @st.cache(ttl=3*60*60) # persist=True
@@ -69,8 +72,8 @@ def app():
         st.write("**选择查询日期范围**")
         date_lower, date_upper = st.select_slider(
              '',
-             options=date_range,
-             value=(date_range[-3], date_range[-1]))
+             options=date_range[-3:],
+             value=(date_range[-2], date_range[-1]))
 
         data_sub = data[(data['日期']>=date_lower)&(data['日期']<=date_upper)&\
                          (data['longitude']>=(target_long-0.035))&(data['longitude']<=(target_long+0.035))&\

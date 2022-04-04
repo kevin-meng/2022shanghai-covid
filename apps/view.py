@@ -6,7 +6,8 @@ import plotly.graph_objects as go
 from streamlit_folium import folium_static
 from visual import plot_summary,load_point2layer,plot_map
 from utils import load_pickle
-from config import info_data,info_contact,MODE, mobile_params,pc_params
+from config import MODE, mobile_params,pc_params
+from content import info_data,info_contact
 
 
 
@@ -31,6 +32,12 @@ def app():
     map_width, map_height, graph_width, graph_height, use_icon = params
     
     st.write("## 上海疫情实时动态") 
+    # 项目说明
+    expander = st.expander("数据说明")
+    expander.write(info_data)
+
+    expander = st.expander("联系方式")
+    expander.write(info_contact)
     st.write("---")
     st.write("### 疫情走势")
     
@@ -54,9 +61,4 @@ def app():
     # components.html(source_code,width=map_width,height=map_height)
 
     st.write("---")
-    # 项目说明
-    expander = st.expander("数据说明")
-    expander.write(info_data)
 
-    expander = st.expander("联系方式")
-    expander.write(info_contact)
