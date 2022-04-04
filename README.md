@@ -32,13 +32,14 @@ https://share.streamlit.io/kevin-meng/2022shanghai-covid/main/app.py
 
 
 ### 应用界面
-![](https://files.mdnice.com/user/5656/682115ee-d2ef-40be-9953-58fd0fa7e56a.png)
 
-![暖心瞬间](https://files.mdnice.com/user/5656/20319339-1246-4e96-83df-c22b3a92d41f.png)
+![](https://files.mdnice.com/user/5656/b16dfe77-ceaa-4c13-a7fa-51fdbe2aab75.png)
 
-![社区情况查询](https://gitee.com/kevin777/wechat_pictures/raw/master/PicGo-image/20220403223532.png)
+![](https://files.mdnice.com/user/5656/8e7073b4-5a49-4cef-8d46-a5be02c6f5d9.png)
 
-![近期情况查询](https://gitee.com/kevin777/wechat_pictures/raw/master/PicGo-image/p1.png)
+![](https://files.mdnice.com/user/5656/fba4882c-6525-46b4-a333-6dc7de4354a2.png)
 
-![疫情分布](https://gitee.com/kevin777/wechat_pictures/raw/master/PicGo-image/篇.png)
+![](https://files.mdnice.com/user/5656/73cbe773-e270-4558-966c-fd4d98bfc1a4.png)
 
+
+![](https://files.mdnice.com/user/5656/a276b378-5a01-4a4a-b423-ea7f37ed00b2.png)
