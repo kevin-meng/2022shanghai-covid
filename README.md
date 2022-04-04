@@ -1,4 +1,4 @@
-![](https://gitee.com/kevin777/wechat_pictures/raw/master/PicGo-image/20220403223509.png)
+![](https://files.mdnice.com/user/5656/11a2cfa7-4d72-48d1-aa90-4811ab317ca5.png)
 # 2022shanghai-covid
 
 本轮上海市疫情从2022年3月有抬头趋势, 每日官方发布的信息是以清单形式呈现,查询不便. 
@@ -32,12 +32,12 @@ https://share.streamlit.io/kevin-meng/2022shanghai-covid/main/app.py
 
 
 ### 应用界面
+![便民信息](https://files.mdnice.com/user/5656/682115ee-d2ef-40be-9953-58fd0fa7e56a.png)
+![暖心瞬间](https://files.mdnice.com/user/5656/20319339-1246-4e96-83df-c22b3a92d41f.png)
 
 ![社区情况查询](https://gitee.com/kevin777/wechat_pictures/raw/master/PicGo-image/20220403223532.png)
 
 ![近期情况查询](https://gitee.com/kevin777/wechat_pictures/raw/master/PicGo-image/p1.png)
-
-![便民信息](https://gitee.com/kevin777/wechat_pictures/raw/master/PicGo-image/p3.png)
 
 ![疫情分布](https://gitee.com/kevin777/wechat_pictures/raw/master/PicGo-image/篇.png)
 
