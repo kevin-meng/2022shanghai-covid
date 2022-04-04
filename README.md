@@ -32,7 +32,8 @@ https://share.streamlit.io/kevin-meng/2022shanghai-covid/main/app.py
 
 
 ### 应用界面
-![便民信息](https://files.mdnice.com/user/5656/682115ee-d2ef-40be-9953-58fd0fa7e56a.png)
+![](https://files.mdnice.com/user/5656/682115ee-d2ef-40be-9953-58fd0fa7e56a.png)
+
 ![暖心瞬间](https://files.mdnice.com/user/5656/20319339-1246-4e96-83df-c22b3a92d41f.png)
 
 ![社区情况查询](https://gitee.com/kevin777/wechat_pictures/raw/master/PicGo-image/20220403223532.png)
