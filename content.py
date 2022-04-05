@@ -361,24 +361,31 @@ gov_help_info_dict = {
 # 感人瞬间
 warmly_moments_list = [{"content":"防疫工作者正在家中上空中课堂的孩子开设绿色通道。[原文>>>](https://mp.weixin.qq.com/s/-HTPhOBRVPwpHEi1qGv37g)",
                  "images":"./files/love/2022-03-17-p6.jpg",
+                 "date":"2022-03-17",
                 },
                 {"content":"早上5点多，沪东新村街道的几位阿姨早起为医护人员准备了暖胃的粥、酱菜、蛋卷，让她们元气满满上“战场”。[原文>>>](https://mp.weixin.qq.com/s/-HTPhOBRVPwpHEi1qGv37g)",
                  "images":"./files/love/2022-03-17-p4.jpg",
+                 "date":"2022-03-17",
                 },
                 {"content":"川沙新镇一社区，未雨绸缪，为居民在检测区域搭起了“超大号”雨棚。[原文>>>](https://mp.weixin.qq.com/s/-HTPhOBRVPwpHEi1qGv37g)",
                  "images":"./files/love/2022-03-17-p3.jpg",
+                 "date":"2022-03-17",
                 },
                 {"content":"特殊天气下，居民们撑着色彩各异的雨伞有序排队检测，这井然有序的场面更难能可贵。高空看去，成了小区里一道靓丽的风景线。[原文>>>](https://mp.weixin.qq.com/s/-HTPhOBRVPwpHEi1qGv37g)",
                  "images":"./files/love/2022-03-17-p2.jpg",
+                 "date":"2022-03-20",
                 },
                 {"content":"下雨天，居民自发为医护人员挂起防水布。[原文>>>](https://mp.weixin.qq.com/s/-HTPhOBRVPwpHEi1qGv37g)",
                  "images":"./files/love/2022-03-17-p1.jpg",
+                 "date":"2022-03-17",
                 },
                 {"content":"医务人员、志愿者通力协作，上门为小区老弱病残等特殊居民检测核酸。[原文>>>](https://mp.weixin.qq.com/s/-HTPhOBRVPwpHEi1qGv37g)",
                  "images":"./files/love/2022-03-17-p7.png",
+                 "date":"2022-03-17",
                 },
                 {"content":"“幸好有中山医生！”封控小区里的中山人。因小区封控居家的中山医院医生也在竭尽所能为抗疫贡献自己的一份力量[原文>>>](https://mp.weixin.qq.com/s/9Fsqj4Jp9WZIFTKw-8jJ4Q)",
                  "images":"./files/love/202203-30-p1.png",
+                 "date":"2022-03-30",
                 },
                 {"content":"""
                     用脚力换取居民的方便和采样的效率的90后“大白”为聋哑人家庭上门采样。
@@ -389,6 +396,7 @@ warmly_moments_list = [{"content":"防疫工作者正在家中上空中课堂的
                     虽然大家只看懂了“竖大拇指”，但都感受到了她满满的谢意。 
                     [原文>>>](https://mp.weixin.qq.com/s/oRurB79_9d7DJeyP-gRH0Q)""",
                  "images":"./files/love/2022-03-13-p1.jpg",
+                 "date":"2022-03-13",
                 },
                 {"content":"""
                      3月16日凌晨，集结出发的白衣战士们。
@@ -397,6 +405,7 @@ warmly_moments_list = [{"content":"防疫工作者正在家中上空中课堂的
                      这48小时，真的是每一秒钟都填得满满的。大上海忽然慢了下来。而直面病毒的白衣战士此时不能慢，变身“大白”与病毒展开赛跑。
                      [原文>>>](https://mp.weixin.qq.com/s/oRurB79_9d7DJeyP-gRH0Q)""",
                  "images":"./files/love/2022-03-13-p2.jpg",
+                 "date":"2022-03-13",
                 },
                 {"content":"""
                     为了高效的去上门采样，防疫人员用马夹袋制作了“风雨袋”。
@@ -406,21 +415,31 @@ warmly_moments_list = [{"content":"防疫工作者正在家中上空中课堂的
                     于是检测小姐姐自制风雨袋，更高效的上门为行动不便的人，完成核酸检测工作。
                     [原文>>>](https://mp.weixin.qq.com/s/mYOpEGI5ldKIPfwRCyGqsg)""",
                  "images":"./files/love/2022-03-20-p1.jpg",
+                 "date":"2022-03-20",
                 },
                 {"content":"康桥镇各核酸采样点的工作人员、志愿者们，为了让前来核酸检测的居村更好操作，主动为他撑伞。[原文>>>](https://mp.weixin.qq.com/s/vk1ppDCVnwmMIlQ0SCZXDQ)",
                  "images":"./files/love/2022-03-20-p2.jpg",
+                 "date":"2022-03-20",
                 },
                 {"content":"周浦镇在文化中心广场搭建起135顶帐篷，为前来接受核酸检测的居民遮风挡雨。蓝色帐篷宛如“贪吃蛇”，颇为壮观。[原文>>>](https://mp.weixin.qq.com/s/vk1ppDCVnwmMIlQ0SCZXDQ)",
                  "images":"./files/love/2022-03-20-p3.jpg",
+                 "date":"2022-03-20",
                 },
                 {"content":"上钢派出所民警积极协助居民核酸检测，任由雨水打湿了衣服，依然坚守岗位，有序指挥居民排队，保持1米间隔距离。[原文>>>](https://mp.weixin.qq.com/s/vk1ppDCVnwmMIlQ0SCZXDQ)",
-                 "images":"./files/love/2022-03-20-p4.jpg",},
+                 "images":"./files/love/2022-03-20-p4.jpg",
+                 "date":"2022-03-20",
+                },
                 {"content":"雨水已打湿志愿者的发丝，他们仍然为市民打伞，护你周全。。[原文>>>](https://mp.weixin.qq.com/s/vk1ppDCVnwmMIlQ0SCZXDQ)",
-                 "images":"./files/love/2022-03-20-p6.jpg",},
+                 "images":"./files/love/2022-03-20-p6.jpg",
+                 "date":"2022-03-20",
+                },
                 {"content":"张江镇核酸检测点的医务人员收到了一份特殊的礼物，纸条上的字，让人的心都暖化了。。[原文>>>](https://mp.weixin.qq.com/s/vk1ppDCVnwmMIlQ0SCZXDQ)",
-                 "images":"./files/love/2022-03-20-p5.jpg",},
+                 "images":"./files/love/2022-03-20-p5.jpg",
+                 "date":"2022-03-20",
+                },
                 {"content":"在泥城镇荷风翠庭小区内，志愿者们用沙袋应对“暴雨模式”，铺设出特殊的一米线，为居民们搭起一座“暖心桥”。。[原文>>>](https://mp.weixin.qq.com/s/vk1ppDCVnwmMIlQ0SCZXDQ)",
-                 "images":"./files/love/2022-03-20-p7.jpg",},
-                 
+                 "images":"./files/love/2022-03-20-p7.jpg",
+                 "date":"2022-03-20",
+                },
             ]
 
