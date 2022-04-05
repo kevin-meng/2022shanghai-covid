@@ -72,14 +72,14 @@ def app():
         st.write("**选择查询日期范围**")
         date_lower, date_upper = st.select_slider(
              '',
-             options=date_range[-3:],
+             options=date_range[-7:],
              value=(date_range[-2], date_range[-1]))
 
         data_sub = data[(data['日期']>=date_lower)&(data['日期']<=date_upper)&\
                          (data['longitude']>=(target_long-0.035))&(data['longitude']<=(target_long+0.035))&\
                          (data['latitude']>=(target_lat-0.035))&(data['latitude']<=(target_lat+0.035))]
         df_sub = data_sub.groupby('详细地址').agg({'longitude':max,'latitude':max,'日期':distinct}).reset_index()
-
+        
         st.write("")
         sh_sub_map= plot_map(add_point(df_sub,ratio=2,color_index=1),
                          center=(target_lat,target_long),

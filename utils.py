@@ -33,3 +33,13 @@ def chunk_list(datas, chunksize):
 
     for i in range(0, len(datas), chunksize):
         yield datas[i:i + chunksize]
+        
+        
+def flatten(ls, basestring=dict):  
+    # https://blog.csdn.net/u010006643/article/details/42361993?utm_source=blogxgwz7
+    for el in ls:  
+        if hasattr(el, "__iter__") and not isinstance(el, basestring):  
+            for sub in flatten(el):  
+                yield sub  
+        else:  
+            yield el 

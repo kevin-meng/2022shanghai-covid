@@ -25,6 +25,12 @@ st.set_page_config(page_title="共同守沪", page_icon="💗", layout="centered
 image = Image.open("./files/banner-2.png")
 st.image(image,caption="",use_column_width='always')  
 
+st.markdown("""
+<script>
+document.write('<script src="//sharebutton.net/plugin/sharebutton.php?type=vertical&u=' + encodeURIComponent(document.location.href) + '"></scr' + 'ipt>');
+</script>
+""",unsafe_allow_html=True)
+
 
 apps = [
     
