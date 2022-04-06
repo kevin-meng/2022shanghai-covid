@@ -9,6 +9,7 @@ from content import (dists,
                      questions_v1, 
                      questions_v2, 
                      gov_help_info_dict,
+                     exercise_info,
                     )
 
 def app():
@@ -120,7 +121,6 @@ def app():
         expander1.image(img_p1,caption="")
     expander1.info(phone_note)
     
-    # st.write("---")
     expander2 = st.expander("问题\建议征集平台")
     img_s1 = Image.open(data['suggest_imgs'][0])
     expander2.image(img_s1,caption="")
@@ -133,24 +133,6 @@ def app():
     """)
     
     expander01 = st.expander("亲子少儿\成年人\老年人全系列")
-    expander01.write("""
-    
-                **亲子少儿系列**
-                - [幼儿、亲子系列居家锻炼小课堂](https://mp.weixin.qq.com/s/5av_4fcT99J1_ceHtE_OMw)
-                
-                
-                **成年人系列**
-                - [居家体操](https://mp.weixin.qq.com/s/rnOc8vS6rY2hSQjPlGkykQ)
-                - [居家运动攻略](https://mp.weixin.qq.com/s/VEIPPV77PtogZS0DIVQ-vA)
-                - [世界冠军王励勤教你四个居家锻炼小妙招](https://mp.weixin.qq.com/s/QQc_jZS5i8ORI-pfoLDuXw)
-                
-                **老年人系列**
-                - [八段锦-国家体育总局](https://www.bilibili.com/video/BV1Nb41177h8)
-                
-                
-                """)
-
-
-
+    expander01.write(exercise_info)
     st.write("---")    
     

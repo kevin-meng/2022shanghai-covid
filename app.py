@@ -9,27 +9,23 @@ from streamlit_option_menu import option_menu
 from apps import search, view, info, love 
 from utils import load_pickle
 from config import MODE,mobile_params,pc_params
-
+from content import project_summary, info_data
 
 if MODE == 'mobile':
     params = mobile_params
 else:
     params = pc_params
     
-# 导航是否使用 icon
-use_icon = params[4]
-use_icon = True
 
-st.set_page_config(page_title="共同守沪", page_icon="💗", layout="centered")
+st.set_page_config(page_title="共同守沪", page_icon="💗", layout="centered",
+                  menu_items={
+                             'Get help': "https://www.wolai.com/r97G3Jf8EMTDKZnBdKifie",
+                             'Report a bug': "https://github.com/kevin-meng/2022shanghai-covid",
+                             'About':project_summary + info_data})
 
 image = Image.open("./files/banner-2.png")
 st.image(image,caption="",use_column_width='always')  
 
-st.markdown("""
-<script>
-document.write('<script src="//sharebutton.net/plugin/sharebutton.php?type=vertical&u=' + encodeURIComponent(document.location.href) + '"></scr' + 'ipt>');
-</script>
-""",unsafe_allow_html=True)
 
 
 apps = [
@@ -41,11 +37,7 @@ apps = [
 ]
 
 titles = [app["title"] for app in apps]
-
-if use_icon :
-    icons = [app["icon"] for app in apps]
-else:
-    icons = ['empty' for app in apps]  # 仅占位
+icons = [app["icon"] for app in apps]
 
 params = st.experimental_get_query_params()
 

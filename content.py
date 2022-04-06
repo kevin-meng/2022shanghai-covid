@@ -19,6 +19,10 @@ phone_note="""注:以上信息整理自公众号:青春上海 [3月27日](https:
 suggest_note = """注:以上信息整理自公众号:青春上海 [3月29日](https://mp.weixin.qq.com/s/FxecuuiU5ghybTMbklo1eQ)推文.""",
 
 
+project_summary = """
+## 共同守沪 
+疫情当前,项目的目的是为身处上海的朋友提供信息上的帮助, 缓解内心的不安和焦虑. 相信疫情很快就会过去, 上海加油!!!
+"""
 
 info_data =  """
     该应用数据取自[上海市卫生健康委员会](https://wsjkw.sh.gov.cn/xwfb/index.html)每日发布的疫情数据.
@@ -201,7 +205,23 @@ questions_v2 = [
             },
 ]
 
-
+# 运动信息
+exercise_info = """
+    
+                **亲子少儿系列**
+                - [幼儿、亲子系列居家锻炼小课堂](https://mp.weixin.qq.com/s/5av_4fcT99J1_ceHtE_OMw)
+                
+                
+                **成年人系列**
+                - [居家体操](https://mp.weixin.qq.com/s/rnOc8vS6rY2hSQjPlGkykQ)
+                - [居家运动攻略](https://mp.weixin.qq.com/s/VEIPPV77PtogZS0DIVQ-vA)
+                - [世界冠军王励勤教你四个居家锻炼小妙招](https://mp.weixin.qq.com/s/QQc_jZS5i8ORI-pfoLDuXw)
+                
+                **老年人系列**
+                - [八段锦-国家体育总局](https://www.bilibili.com/video/BV1Nb41177h8)
+                
+                
+                """
 
 gov_help_info_dict = {
     '浦东新区':{'phone_content':"""
@@ -751,14 +771,14 @@ warmly_moments_dict = { "2022-03-13":[{"content":"""
                                     "date":"2022-04-05",
                                     },
                                     {"content":"""
-                                           相应社会关切,设计亲子”收治模式.  4月4日晚上9:15，来自上海市多个区域的载有患儿家庭的救护车辆陆续抵达新国博方舱医院W2区入口，“大白”们以最快的速度进行预检和收治。救护车一辆接着一辆地驶入，孩子们在家长的陪护下有序地走入方舱。至4月5日上午8时，该病区已收治患儿家庭共计177人，其中患儿89人，收治工作继续进行中。[原文>>>](https://mp.weixin.qq.com/s/m-Qh32SnbuFPjA_lBaTHJQ)""",
+                                           响应社会关切,设计亲子”收治模式.  4月4日晚上9:15，来自上海市多个区域的载有患儿家庭的救护车辆陆续抵达新国博方舱医院W2区入口，“大白”们以最快的速度进行预检和收治。救护车一辆接着一辆地驶入，孩子们在家长的陪护下有序地走入方舱。至4月5日上午8时，该病区已收治患儿家庭共计177人，其中患儿89人，收治工作继续进行中。[原文>>>](https://mp.weixin.qq.com/s/m-Qh32SnbuFPjA_lBaTHJQ)""",
                                     "images":"./files/love/2022-04-05-p5.png",
                                     "date":"2022-04-05",
                                     }, 
                                     ],
                         "2022-04-06":[
                                     {"content":"""
-                                            **“上海一游”的手机**.
+                                            **“上海一日游”的手机**.
                                             
 自扬州的妹妹在家吭哧吭哧打包抗疫物资时，把自己手机也打包给上海人民了. 经过大家的努力,最终找到. 这是一个手机一日游的故事~” [原文>>>](https://mp.weixin.qq.com/s/WF4eiaSjTK0Si-je7M3-ng)""",
                                     "images":"./files/love/2022-04-06-p1.png",

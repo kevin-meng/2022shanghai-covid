@@ -55,10 +55,6 @@ def app():
     point_layer = load_point2layer(point_json)
     sh_map = plot_map(point_layer)
     folium_static(sh_map,width=map_width,height=map_height)    
-    # HtmlFile = open("./files/latest_week.html", 'r', encoding='utf-8')
-    # source_code = HtmlFile.read() 
-    # print(source_code)
-    # components.html(source_code,width=map_width,height=map_height)
 
     st.write("---")
 

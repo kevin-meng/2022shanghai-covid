@@ -8,14 +8,21 @@
 
 **疫情当前，不容松懈，让我们一起齐心协力, 共同抗疫！ 上海加油！**
 
- 
+项目发布时间:2022-04-02
+
 ### 支持功能
 
 1. 支持最新上海卫建委官方的通报小区信息查询.
-2. 收集整理官方发布的抗疫便民信息.(常见 15问)
+2. 收集整理官方+大众发布的抗疫便民信息.
+    - 疫情相关(常见 16问)
+    - 买菜指南
+    - 就医买药指南
+    - 感染者经历讲述
+    - 官方各区抗疫服务热线
+    
 3. 支持查看小区周边3km疫情情况.
-4. 近一周疫情小区分布查看.
-5. 收集抗疫的点滴温暖瞬间,传递温暖,不让其被负面情绪所掩盖.
+4. 近3天周边疫情小区分布查看.
+5. 收集抗疫的点滴温暖瞬间,传递温暖,不让其被负面情绪所掩盖. 缓解隔离在家的焦虑.同时向逆行者们致敬
 
 本轮疫情期间项目将保持运行,数据实时更新.
 一切数据以上海卫建委官方发布为准
@@ -34,13 +41,19 @@ https://share.streamlit.io/kevin-meng/2022shanghai-covid/main/app.py
 
 ### 应用界面
 
-![](https://files.mdnice.com/user/5656/b16dfe77-ceaa-4c13-a7fa-51fdbe2aab75.png)
+![](https://files.mdnice.com/user/5656/b20ec877-9b31-4f0a-a9a3-e111e61a592c.png)
 
-![](https://files.mdnice.com/user/5656/8e7073b4-5a49-4cef-8d46-a5be02c6f5d9.png)
+---
 
-![](https://files.mdnice.com/user/5656/fba4882c-6525-46b4-a333-6dc7de4354a2.png)
+![](https://files.mdnice.com/user/5656/9b31d935-2092-47c9-ba09-829250f68ec0.png)
 
-![](https://files.mdnice.com/user/5656/73cbe773-e270-4558-966c-fd4d98bfc1a4.png)
+---
 
+![](https://files.mdnice.com/user/5656/6ccf783d-a6f4-4e86-92ca-e0a435bdf366.png)
+![](https://files.mdnice.com/user/5656/af4ce6dd-105c-4655-99c0-fda26635dac8.png)
 
-![](https://files.mdnice.com/user/5656/a276b378-5a01-4a4a-b423-ea7f37ed00b2.png)
+---
+
+![](https://files.mdnice.com/user/5656/0d47f5e9-6286-41af-9b4d-0c4fc7d98291.png)
+
+![](https://files.mdnice.com/user/5656/f5843fa6-2aaa-410c-bba7-48b83f6e22be.png)
