@@ -72,17 +72,37 @@ def app():
     expander0.write("""[完整页面跳转](https://www.wolai.com/6TLbKJYT1JTq3cFqXTWVXC)""")
     img = Image.open("./files/vegetable.png")
     expander0.image(img)
+    
+    st.write("""
+            .
+            ###### 必备技能
+            - [蔬菜食物怎么才能储存更久](https://mp.weixin.qq.com/s/6-x8BHs0EAJAKcdXL36oWg)
+            """)
     st.write("---")
     ##############################################################    
-    st.write("### 💡 医院停开诊情况查询")
+    st.write("### 💡 疫情期间就医买药指南")
     st.info("""
-        本市部分医疗机构因配合疫情协查工作,暂停部分医疗服务. 就诊前建议先查询.
+        疫情期间, 隔离在家如何就医买药. [详细指南](https://www.wolai.com/vL8AuEjhmeHbcg8cPR64fk)
     """)
-    expander0 = st.expander("当日医院情况查询")
-    expander0.write("""微信小程序-随申办""")
-    img = Image.open("./files/hospital.png")
+    expander0 = st.expander("就医指南")
+    expander0.write("""
+            [就医指南](https://www.wolai.com/eagXSLg3wL4rBkMYesLfKo)
+            """)
+    img = Image.open("./files/care.png")
     expander0.image(img)
-    st.write("---")
+    
+    expander01 = st.expander("买药指南")
+    expander01.write("""        
+        [配药指南](https://www.wolai.com/hr1dPzwUTWRQmpFUQU3C1W)
+        [线上买药平台](https://www.wolai.com/onm6ER8bVKq1KeNnMoxME4)
+        """)
+    img = Image.open("./files/medicine.png")
+    expander01.image(img)
+
+    expander02 = st.expander("拨打120")
+    expander02.write("""[如何正确使用120](https://mp.weixin.qq.com/s/LCnDvQxuwbDN2ND0rFTKcw)""")
+    st.write("---")    
+    
     ##############################################################
     st.write("### 💡上海各区保障电话信息汇总")
     
@@ -106,5 +126,31 @@ def app():
     expander2.image(img_s1,caption="")
     expander2.info(suggest_note)
 
+    ##############################################################    
+    st.write("### 💡 居家锻炼动起来")
+    st.info("""
+        宅家抗疫期间,运动不能停,适当运动,提高自身免疫力.
+    """)
     
+    expander01 = st.expander("亲子少儿\成年人\老年人全系列")
+    expander01.write("""
+    
+                **亲子少儿系列**
+                - [幼儿、亲子系列居家锻炼小课堂](https://mp.weixin.qq.com/s/5av_4fcT99J1_ceHtE_OMw)
+                
+                
+                **成年人系列**
+                - [居家体操](https://mp.weixin.qq.com/s/rnOc8vS6rY2hSQjPlGkykQ)
+                - [居家运动攻略](https://mp.weixin.qq.com/s/VEIPPV77PtogZS0DIVQ-vA)
+                - [世界冠军王励勤教你四个居家锻炼小妙招](https://mp.weixin.qq.com/s/QQc_jZS5i8ORI-pfoLDuXw)
+                
+                **老年人系列**
+                - [八段锦-国家体育总局](https://www.bilibili.com/video/BV1Nb41177h8)
+                
+                
+                """)
+
+
+
+    st.write("---")    
     
