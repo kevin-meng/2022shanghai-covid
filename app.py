@@ -23,15 +23,15 @@ st.set_page_config(page_title="共同守沪", page_icon="💗", layout="centered
                              'Report a bug': "https://github.com/kevin-meng/2022shanghai-covid",
                              'About':project_summary + info_data})
 
-image = Image.open("./files/banner-2.png")
+image = Image.open("./files/banner.png")
 st.image(image,caption="",use_column_width='always')  
 
 
 
 apps = [
     
-    {"func": info.app, "title": "便民信息", "icon": "list-task"},
-    {"func": love.app, "title": "温暖瞬间", "icon": "sun"},
+#     {"func": info.app, "title": "便民信息", "icon": "list-task"},
+#     {"func": love.app, "title": "温暖瞬间", "icon": "sun"},
     {"func": search.app, "title": "社区情况", "icon": "house"},
     {"func": view.app, "title": "疫情走势", "icon": "map"},
 ]
