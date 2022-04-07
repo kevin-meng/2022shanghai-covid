@@ -93,10 +93,10 @@ def plot_summary(df_summary,width=450, height=400,):
     colors = ['rgb(67,67,67)', 'firebrick', 'rgb(49,130,189)','rgb(131, 90, 241)', 'rgb(189,189,189)',]
     fig = go.Figure()
 
-    fig.add_trace(go.Scatter(x=df_summary['日期'], y=df_summary['确诊'] + df_summary['无症状感染者'], fill='tonexty',
-                        mode= 'markers+lines',name='合计',line=dict(color=colors[1])))
+    # fig.add_trace(go.Scatter(x=df_summary['日期'], y=df_summary['确诊'] + df_summary['无症状感染者'], fill='tonexty',
+    #                     mode= 'markers+lines',name='合计',line=dict(color=colors[1])))
     fig.add_trace(go.Scatter(x=df_summary['日期'], y=df_summary['确诊'], fill='tozeroy',
-                        mode='markers+lines',name='确诊',line=dict(color=colors[0])
+                        mode='markers+lines',name='确诊',line=dict(color=colors[1])
                         ))
     fig.add_trace(go.Scatter(x=df_summary['日期'], y=df_summary['无症状感染者'], fill='tonexty',
                         mode= 'markers+lines',name='无症状感染者',line=dict(color=colors[2])))
