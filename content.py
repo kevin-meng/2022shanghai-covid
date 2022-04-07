@@ -37,6 +37,7 @@ info_contact = """
     - 有任何关于本项目建议或者问题, 可[邮件](kevin_meng@yeah.net)与我联系.
     - 项目源码已发布到 [GItHub](https://github.com/kevin-meng/2022shanghai-covid), 欢迎 Star.
     """
+#     - 这里有一份 [上海疫情期间生活指南](https://www.wolai.com/6TLbKJYT1JTq3cFqXTWVXC) 请收藏.
 
 # 预防类
 questions_v1 = [{"question":"Q1-01：邻居感染了，我该怎么办？",

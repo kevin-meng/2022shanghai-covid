@@ -3,6 +3,7 @@ import jinja2
 import json
 import streamlit as st
 import folium
+import pandas as pd
 from streamlit_folium import folium_static
 from PIL import Image
 import streamlit.components.v1 as components
@@ -11,25 +12,18 @@ from utils import load_pickle,distinct
 from visual import add_point,plot_maker,plot_map
 from config import MODE, mobile_params,pc_params
 from content import info_data,info_contact
+from database import eare_ls,latest_date,date_range,dist_info
 
-
-
-@st.cache(ttl=3*60*60) # persist=True
+@st.cache(persist=True) # ttl=3*60*60
 def load_data():
-    data = load_pickle("./data/df_address.pkl")
-    df_summary = load_pickle("./data/df_summary.pkl")
-    
-    date_range,latest_date, eare_ls, dist_info= load_pickle("./data/备用数据.pkl")
-    dists = load_pickle("./data/dists.pkl")
-    return data,df_summary, date_range,latest_date, eare_ls, dist_info,dists
+    data = load_pickle("./data/df_address_week.pkl")
+    return data 
 
 
 def app():
     """
     查询被感染社区信息,以及周边情况.
     """
-    # 载入数据
-    data,df_summary, date_range,latest_date, eare_ls, dist_info,dists = load_data()
 
     # ###################################################################
     if MODE == 'mobile':
@@ -39,25 +33,49 @@ def app():
     map_width, map_height, graph_width, graph_height, use_icon = params
     
     
-    st.write("## 社区疫情情况查询")
-
-
+    st.write("## 疫情信息查询")
+    
+    st.info("""
+            **恐惧源于未知.  相信科学! 拒绝谣言!**
+            
+            **知道的越多,恐惧的越少**
+            
+            **疫情并不可怕, 恐慌没有必要.**
+            
+            这里有一份覆盖**疫情检测\治疗\买菜\买药看病等**各方面的笔记:
+            **[疫情期间生活指南](https://www.wolai.com/6TLbKJYT1JTq3cFqXTWVXC)**
+            希望对你有帮助.
+             """)
+    
+    
+    st.write('---')
+    st.write("### 社区感染情况")
     st.info(f"""
-        - 数据最新日期:{latest_date}
-        - 目前仅支持已被通报的社区查询.
-        """)
+    - 数据最新日期:{latest_date}
+    - 目前仅支持已被通报的社区查询.
+    """)
 
-    st.write("#### 输入关键字搜索")
+    st.write("**输入关键字搜索**")
 
 
     # 选择小区
     target_area = st.selectbox('', eare_ls+[""],index = len(eare_ls))
-    # 选择小区的位置
-    target_long = dist_info.get(target_area,dict()).get('longitude',0)
-    target_lat = dist_info.get(target_area,dict()).get('latitude',0)
+    
+    
+    if target_area in eare_ls:
 
-    if target_long != 0:
-        data_target = data[data['详细地址']==target_area].sort_values('日期')[['详细地址','日期']].reset_index(drop=True)
+
+        # 选择小区的位置
+        target_long = dist_info.get(target_area,dict()).get('longitude',0)
+        target_lat = dist_info.get(target_area,dict()).get('latitude',0)
+        target_date_ls = dist_info.get(target_area,dict()).get('日期',[])
+        
+        # 载入数据
+        data = load_data()     
+        # data_target = data[data['详细地址']==target_area].sort_values('日期')[['详细地址','日期']].reset_index(drop=True)
+        data_target = pd.DataFrame(data = target_date_ls,columns=['日期']).sort_values('日期')
+        data_target['社区'] = target_area
+        
         st.empty()
         st.write("**从3月1日至今的疫情通报记录:**")
         if len(data_target)==0:
@@ -72,7 +90,7 @@ def app():
         st.write("**选择查询日期范围**")
         date_lower, date_upper = st.select_slider(
              '',
-             options=date_range[-7:],
+             options=date_range[-3:],
              value=(date_range[-2], date_range[-1]))
 
         data_sub = data[(data['日期']>=date_lower)&(data['日期']<=date_upper)&\
