@@ -17,6 +17,7 @@ from database import eare_ls,latest_date,date_range,dist_info
 @st.cache(persist=True) # ttl=3*60*60
 def load_data():
     data = load_pickle("./data/df_address_week.pkl")
+    data.shape  # 必须
     return data 
 
 
@@ -71,7 +72,9 @@ def app():
         target_date_ls = dist_info.get(target_area,dict()).get('日期',[])
         
         # 载入数据
-        data = load_data()     
+        data = load_data() 
+        # print(data.shape)
+        # print("data init shape:",data[data['日期']=='2022-04-06'].shape)
         # data_target = data[data['详细地址']==target_area].sort_values('日期')[['详细地址','日期']].reset_index(drop=True)
         data_target = pd.DataFrame(data = target_date_ls,columns=['日期']).sort_values('日期')
         data_target['社区'] = target_area
@@ -92,12 +95,14 @@ def app():
              '',
              options=date_range[-3:],
              value=(date_range[-2], date_range[-1]))
-
+        
         data_sub = data[(data['日期']>=date_lower)&(data['日期']<=date_upper)&\
                          (data['longitude']>=(target_long-0.035))&(data['longitude']<=(target_long+0.035))&\
                          (data['latitude']>=(target_lat-0.035))&(data['latitude']<=(target_lat+0.035))]
         df_sub = data_sub.groupby('详细地址').agg({'longitude':max,'latitude':max,'日期':distinct}).reset_index()
-        
+        # print(date_lower, date_upper)
+        # print(data_sub[data_sub['日期']==date_upper].shape)
+        # print(df_sub[df_sub['详细地址']==target_area])
         st.write("")
         sh_sub_map= plot_map(add_point(df_sub,ratio=2,color_index=1),
                          center=(target_lat,target_long),
