@@ -35,7 +35,7 @@
 ****
 ### 效果预览
 
-https://share.streamlit.io/kevin-meng/2022shanghai-covid/main/app.py
+https://share.streamlit.io/kevin-meng/2022shanghai-covid/main/full_app.py
 
 
 
