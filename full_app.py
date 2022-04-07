@@ -7,7 +7,7 @@ import json
 import pandas as pd
 from PIL import Image
 from streamlit_option_menu import option_menu
-from apps import search, view # , info, love 
+from apps import search, view , info, love 
 from utils import load_pickle
 from config import MODE,mobile_params,pc_params
 from content import project_summary, info_data
