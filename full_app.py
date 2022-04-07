@@ -32,8 +32,8 @@ st.image(image,caption="",use_column_width='always')
 
 apps = [
     # 解除注释可显示完整站点    
-    # {"func": info.app, "title": "便民信息", "icon": "list-task"},
-    # {"func": love.app, "title": "温暖瞬间", "icon": "sun"},
+    {"func": info.app, "title": "便民信息", "icon": "list-task"},
+    {"func": love.app, "title": "温暖瞬间", "icon": "sun"},
     {"func": search.app, "title": "社区情况", "icon": "house"},
     {"func": view.app, "title": "疫情走势", "icon": "map"},
 ]
