@@ -7,6 +7,8 @@ import json
 import pandas as pd
 from PIL import Image
 from streamlit_option_menu import option_menu
+import streamlit.components.v1 as components
+
 from apps import search, view # , info, love 
 from utils import load_pickle
 from config import MODE,mobile_params,pc_params
@@ -24,6 +26,20 @@ st.set_page_config(page_title="共同守沪", page_icon="💗", layout="centered
                              'Get help': "https://www.wolai.com/r97G3Jf8EMTDKZnBdKifie",
                              'Report a bug': "https://github.com/kevin-meng/2022shanghai-covid",
                              'About':project_summary + info_data})
+
+html_string = '''
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?909a9e74e3b7d3885e3e584297207867";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+'''
+components.html(html_string) 
+
 
 image = Image.open("./files/banner.png")
 st.image(image,caption="",use_column_width='always')  
