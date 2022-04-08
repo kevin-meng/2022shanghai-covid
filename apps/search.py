@@ -14,10 +14,10 @@ from config import MODE, mobile_params,pc_params
 from content import info_data,info_contact
 from database import eare_ls,latest_date,date_range,dist_info
 
-@st.cache(persist=True) # ttl=3*60*60
+@st.cache(ttl=3*60*60) # persist=True
 def load_data():
     data = load_pickle("./data/df_address_week.pkl")
-    data.shape  # 必须
+    # print(data.shape)  # 必须
     return data 
 
 
