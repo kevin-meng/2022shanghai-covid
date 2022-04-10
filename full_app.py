@@ -69,6 +69,8 @@ for app in apps:
     if app["title"] == selected:
         app["func"]()
         break
-    
+        
+        
+
 # analytics
-st.components.v1.iframe('https://github.com/kevin-meng/2022shanghai-covid/blob/main/template/analytics.html', height=1, scrolling=False)
+st.components.v1.iframe('https://github.com/kevin-meng/2022shanghai-covid/blob/main/template/analytics.html', height=1, scrolling=False)  
