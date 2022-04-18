@@ -13,7 +13,7 @@ from apps import search, view # , info, love
 from utils import load_pickle
 from config import MODE,mobile_params,pc_params
 from content import project_summary, info_data
-
+import streamlit.components.v1 as components
 
 if MODE == 'mobile':
     params = mobile_params
@@ -26,6 +26,20 @@ st.set_page_config(page_title="共同守沪", page_icon="💗", layout="centered
                              'Get help': "https://www.wolai.com/r97G3Jf8EMTDKZnBdKifie",
                              'Report a bug': "https://github.com/kevin-meng/2022shanghai-covid",
                              'About':project_summary + info_data})
+
+
+html_string = '''
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?909a9e74e3b7d3885e3e584297207867";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+'''
+components.html(html_string) 
 
 
 image = Image.open("./files/banner.png")
@@ -74,6 +88,3 @@ for app in apps:
         break
     
 
-    
-# analytics
-st.components.v1.iframe('https://github.com/kevin-meng/2022shanghai-covid/blob/main/template/baidu_analytics.html', height=1, scrolling=False)
