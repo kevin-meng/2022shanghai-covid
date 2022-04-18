@@ -28,6 +28,20 @@ st.set_page_config(page_title="共同守沪", page_icon="💗", layout="centered
                              'About':project_summary + info_data})
 
 
+html_string = '''
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?909a9e74e3b7d3885e3e584297207867";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+'''
+components.html(html_string) 
+
+
 image = Image.open("./files/banner.png")
 st.image(image,caption="",use_column_width='always')  
 
@@ -76,4 +90,4 @@ for app in apps:
 
     
 # analytics
-st.components.v1.iframe('https://github.com/kevin-meng/2022shanghai-covid/blob/main/template/baidu_analytics.html', height=1, scrolling=False)
+# st.components.v1.iframe('https://github.com/kevin-meng/2022shanghai-covid/blob/main/template/baidu_analytics.html', height=1, scrolling=False)
